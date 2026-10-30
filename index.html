@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Something special for you</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=Caveat:wght@500&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div id="hearts"></div>
+<button id="mute" aria-label="Music on/off" hidden>♪</button>
+<audio id="song" loop preload="auto"><source src="music/birthday.mp3" type="audio/mpeg"></audio>
+
+<section class="page active" id="p1">
+  <div class="center">
+    <p class="small">Someone has something special to tell you...</p>
+    <div class="envelope" id="env"><div class="flap"></div><div class="paper">💌</div><div class="front"></div></div>
+    <button class="btn" id="open">Open letter</button>
+  </div>
+</section>
+
+<section class="page" id="p2">
+  <div class="center">
+    <p class="small">Today belongs to you</p>
+    <h1>Happy Birthday,<br><span class="name"></span>!</h1>
+    <p class="small">I made you something. Take your time.</p>
+    <button class="btn next">Begin</button>
+  </div>
+</section>
+
+<section class="page" id="p3">
+  <div class="wrap">
+    <h2>Memories I keep</h2>
+    <div class="grid" id="grid"></div>
+    <button class="btn next">Continue</button>
+  </div>
+</section>
+
+<section class="page" id="p4">
+  <div class="wrap">
+    <h2>Things I don't tell you enough</h2>
+    <div class="letter" id="letter"></div>
+    <button class="btn next" id="lnext" hidden>Continue</button>
+  </div>
+</section>
+
+<section class="page" id="p5">
+  <div class="wrap">
+    <h2>10 wishes for your life</h2>
+    <ol id="wishes"></ol>
+    <button class="btn" id="wbtn">Reveal a wish</button>
+    <button class="btn next" id="wnext" hidden>Continue</button>
+  </div>
+</section>
+
+<section class="page" id="p6">
+  <div class="center">
+    <div class="cake" id="cake">
+      <div class="candles"><i></i><i></i><i></i></div>
+      <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+    </div>
+    <p class="small" id="hint">Close your eyes, make a wish, then tap the cake.</p>
+    <div id="final" hidden></div>
+    <div id="prayer" hidden></div>
+    <figure id="carBox" hidden>
+      <img src="images/car.jpg" alt="A special surprise" onerror="this.parentElement.remove()">
+      <figcaption>This one is for you.</figcaption>
+    </figure>
+    <audio id="finalSong" src="music/final-song.mp3" preload="auto"></audio>
+  </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
